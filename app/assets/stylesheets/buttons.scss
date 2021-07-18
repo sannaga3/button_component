@@ -56,11 +56,11 @@ span {
 
 // ボタン共通設定
 .btn {
-  width: 8;
-  height: 1.5;
+  width: 8rem;
+  height: 1.5rem;
   font-size: 1.4rem;
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1.5rem;
   position: relative;
   display: inline-block;
   padding: 1rem 4rem;
@@ -87,7 +87,7 @@ span {
 .button2, .button3, .button4 , .button5, .button6, .button6, .button7,
 .button8, .button9, .button10, .button11, .button12, .button13, .button14,
 .button15, .button16, .button17, .button18, .button19, .button20, .button21,
-.button22, .button23, .button24 {
+.button22, .button23, .button24, .button25, .button26, .button27, .button29 {
   color: #fff;
   background-color: #9da9e0;
   border-radius: 5px;
@@ -177,8 +177,8 @@ span {
   flex-direction: row;
 }
 .button16, .button17, .button18 {
-  width: 8;
-  height: 1.5;
+  width: 8rem;
+  height: 1.5rem;
   display: flex;
   color: #FFF;
   margin: 20px;
@@ -303,3 +303,219 @@ span {
 .button23 {
   background: linear-gradient(25deg, rgba(255, 190, 44, 0.4), rgba(255, 44, 171, 0.7));
 }
+.button23:hover {
+  background: linear-gradient(25deg, rgb(255, 179, 3), rgb(255, 0, 153));
+}
+
+
+.button24 {
+  background-color: #fdf07d;
+  background-image: repeating-linear-gradient(90deg, #f4c14e 0% 10%, transparent 10% 20%);
+}
+
+.button25 {
+  background-color: #ece9c2;
+  background-image: repeating-linear-gradient(45deg, #f4c14e, transparent 20% 20%);
+}
+
+.button26 {
+  color: #fbfbfb;
+  border-radius: 30px;
+  text-shadow:  //全方位ぼかし強め
+    rgb(226, 121, 121) 1px 1px 10px, rgb(226, 121, 121) -1px 1px 10px,
+    rgb(226, 121, 121) 1px -1px 10px, rgb(226, 121, 121) -1px -1px 10px;
+  background-color: #fff;
+  background-image:
+  repeating-linear-gradient(90deg, #e5baba 0 10px, white 10px 19px),
+  repeating-linear-gradient(180deg, white 0 10px, #e5baba 10px 19px);
+  background-blend-mode: difference;    //背景イメージを背景色や画像とどのようにブレンドするか決める. difference → 互い違いに配色
+}
+
+.button27 {
+  display: inline-block;  //テキストとborderに色
+  background: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  border: 2px solid #fa6c9f;
+  color: #fa6c9f;
+  z-index: 1;
+}
+
+//枠グラデーション hover時背景グラデーション
+.frame28 {
+  width: 8.6rem;
+  height: 1.9rem;
+  border-radius: 30px;
+  background: linear-gradient(to right bottom, #ff5f6d, #ffc371);
+  z-index: 2;
+}
+.button28 {
+  position: absolute;
+  top: -8px;
+  right: -7px;
+  display: block;
+  color: #f66f00;
+  background: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  z-index: 1;
+}
+.frame28:hover {
+  border-color: transparent;
+}
+.button28:hover {
+  border-color:transparent;
+  color: #fff;
+  background: linear-gradient(45deg, #fa6c9f 0%, #ffe140 50%, #ff357f 120%);
+  background-size: 200% auto;
+  background-position: right center; //背景位置指定
+  box-shadow: 0 5px 10px rgba(250,108,159,0.4);
+}
+.regular_font3 {
+  display: block;
+  position: relative;
+  top: -50px;
+  left: 180px;
+  font-size: 2rem;
+}
+//枠グラデーション hover時背景グラデーションここまで
+
+
+.button29 {
+  border-radius: 30px;
+  animation: colorChange 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes colorChange {
+  from {
+    background: linear-gradient(-45deg, #f8eca7, #ff9558);
+  }
+  50% {
+    background: linear-gradient(-45deg, #74fa86, #fbff27);
+  }
+  to {
+    background: linear-gradient(-45deg, #77fae4, #b9fb92);
+  }
+}
+
+
+//360度回転
+.button30 {
+  width: 30px;
+  height: 30px;
+  line-height: 3rem;
+  padding: 1rem 1rem;
+  border-radius: 30px;
+  margin-left: 5rem;
+  margin-top: 3rem;
+  color: white;
+  background: linear-gradient(-45deg, #f8eca7, #ff9558);
+  animation: locateChange 3s linear infinite;
+}
+@keyframes locateChange {
+  from {
+    transform: rotate(0deg) translateX(20px);
+  }
+  to {
+    transform: rotate(360deg) translateX(20px);
+  }
+}
+.regular_font4 {
+  display: block;
+  position: relative;
+  top: -50px;
+  left: 285px;
+  font-size: 2rem;
+}
+//360度回転ここまで
+
+
+//平行移動
+.button31 {
+  width: 30px;
+  height: 30px;
+  line-height: 3rem;
+  padding: 1rem 1rem;
+  border-radius: 30px;
+  margin-left: 5rem;
+  margin-top: 3rem;
+  color: white;
+  background: linear-gradient(-45deg, #f8eca7, #ff9558);
+  animation: locateChange2 3s linear infinite;
+}
+@keyframes locateChange2 {
+  from {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+.regular_font4 {
+  display: block;
+  position: relative;
+  top: -50px;
+  left: 285px;
+  font-size: 2rem;
+}
+//平行移動ここまで
+
+
+//ジグザグ移動
+.button32 {
+  width: 20px;
+  height: 20px;
+  line-height: 2rem;
+  padding: 1rem 1rem;
+  border-radius: 30px;
+  margin-left: 5rem;
+  margin-top: 3rem;
+  color: white;
+  background: linear-gradient(-45deg, #f8eca7, #ff9558);
+  animation: locateChange3 3s linear infinite;
+}
+@keyframes locateChange3 {
+  from {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(25px) translateY(25px);
+  }
+  to {
+    transform: translateX(50px) translateY(0px);;
+  }
+}
+.regular_font4 {
+  display: block;
+  position: relative;
+  top: -50px;
+  left: 285px;
+  font-size: 2rem;
+}
+//ジグザグ移動ここまで
+
+//伸びるボタン
+.button33 {
+  width: 20px;
+  height: 20px;
+  line-height: 2rem;
+  padding: 1rem 1rem;
+  border-radius: 30px;
+  margin-left: 5rem;
+  margin-top: 3rem;
+  color: white;
+  background: linear-gradient(-45deg, #f8eca7, #ff9558);
+  animation: locateChange4 3s linear infinite;
+}
+@keyframes locateChange4 {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 50%;
+  }
+}
+//伸びるボタンここまで

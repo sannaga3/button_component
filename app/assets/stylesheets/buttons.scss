@@ -1,3 +1,305 @@
-// Place all the styles related to the buttons controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// ボタン以外の設定
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+  background: #f6f2e5;
+}
+
+h1 {
+  margin: 0;
+  line-height: 70px;
+}
+
+.header {
+  height: 70px;
+  background: #fff;
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+}
+
+.header:hover {
+  transform: scale(0.9);
+  border-radius: 50px;
+}
+
+span {
+  display: inline-block;
+  margin-left: 10%;
+}
+
+.regular_font {
+  font-size: 2rem;
+}
+
+.border {
+  border-bottom: solid 2px gray;
+}
+
+.contents-wrapper {
+  width: auto;
+  height: auto;
+  margin: 5%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 0 30px rgba(0,0,0,0.3);
+}
+// ボタン以外の設定ここまで
+
+// ボタン共通設定
+.btn {
+  width: 8;
+  height: 1.5;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;               //カーソルが指ではなくポインタになる
+  user-select: text;             //ボタンのテキストが範囲選択できる
+  transition: all 0.3s;          //要素の 2つの状態間の変化を定義 activeやhoverまでの時間指定
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  border-radius: 1rem;
+}
+
+.btn {
+  margin: 10px
+}
+// 共通設定ここまで
+
+// ボタン個別設定
+.button1 {
+  color: #fff;
+  background-color: #eb6100;
+  border-radius: 5px;
+}
+.button2, .button3, .button4 , .button5, .button6, .button6, .button7,
+.button8, .button9, .button10, .button11, .button12, .button13, .button14,
+.button15, .button16, .button17, .button18, .button19, .button20, .button21,
+.button22, .button23, .button24 {
+  color: #fff;
+  background-color: #9da9e0;
+  border-radius: 5px;
+}
+
+.button2{
+  box-shadow: 0 0 8px rgb(85, 101, 151)         //全方位ぼかし
+}
+
+.button3 {
+  box-shadow: 4px 4px rgb(85, 101, 151);       //下と右に影
+}
+
+.button4 {
+  box-shadow: 4px 4px 6px rgb(85, 101, 151);       //下と右に影 + ぼかし
+}
+
+.button5 {
+  box-shadow: -5px -5px 10px #545f77 inset;    //下と右の内側に影
+}
+
+.button6 {
+  text-shadow: 0 2px rgb(131, 127, 127);
+  box-shadow: 0 7px rgb(85, 101, 151);     //下とテキストに影
+}
+
+// 影の複数設定について・・・下記のように繰り返すことで影を多重に設定可能
+// box-shadow: 左右位置 上下位置 ぼかし 広がり 色 内側, 左右の位置 上下の位置 ぼかし 広がり 色 内側;
+
+// box-shadow: 4px 4px 6px −2px rgb(85, 101, 151), 3px 3px 15px rgba(255,255,255,0.8) inset;
+
+.button7 {
+  text-shadow: 0 2px rgb(131, 127, 127);
+  box-shadow: 3px 3px 6px 3px rgb(139, 137, 137),
+  3px 3px 15px rgba(255,255,255,0.8) inset;     //左上内側と右下外側に影
+}
+
+.button8 {
+  text-shadow: 0 2px rgb(131, 127, 127);
+  box-shadow: 5px 5px 3px rgb(126, 131, 175),
+  4px 4px 6px 2px rgba(255,255,255,0.8) inset;     //左上右下で２種類の影
+}
+
+.button9 {
+  box-shadow: 0 0 20px rgb(255, 255, 255) inset;         //内側全方位ぼかし
+}
+
+.button10 {
+  box-shadow: 2px 4px 4px rgba(48, 64, 94, 0.3);        //影 下と右 + ぼかし + 透過度調整
+}
+
+.button11 {
+  border-bottom: 6px solid #7a82a8;      //影 下 hover前
+}
+.button11:hover {
+  border-bottom: 2px solid #7a82a8;      //影 下 ホバー後
+}
+
+.button12, .button13  {
+  border-bottom: 6px solid #7a82a8;      //ホバー前
+}
+.button12:hover {
+  transform: scale(1.2);     //ホバー時大きく
+}
+
+.button13:hover {
+  transform: scale(0.9);     //ホバー時小さく + 凹む
+  border-bottom: 2px solid #7a82a8;
+}
+
+.button14:hover {
+  color: #7a82a8;     //ホバー時背景とテキストの色反転
+  background: #fff;
+  border-bottom: 2px solid #7a82a8;
+}
+
+.button15:hover {
+  border-bottom: 3px solid #7a82a8; //ホバー時立体的にする
+  border-right: 3px solid #7a82a8;  //ホバー時立体的にする
+  box-shadow: 5px 5px 3px rgba(126, 131, 175, 0.3); //ホバー時浮かせる
+}
+
+// 360度回転
+.round-box{
+  width: 10;
+  display: flex;
+  flex-direction: row;
+}
+.button16, .button17, .button18 {
+  width: 8;
+  height: 1.5;
+  display: flex;
+  color: #FFF;
+  margin: 20px;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+}
+.button16:hover{
+  animation: rolling 2s linear infinite;
+}
+@keyframes rolling {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.round-box .regular_font {
+  line-height: 4;
+  margin-left: 8%;
+}
+// 360度回転ここまで
+
+// 180度回転で文字位置反転
+.button17:hover{
+  animation: rolling2 1s linear infinite;
+}
+@keyframes rolling2 {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(180deg);
+  }
+}
+// 180度回転で文字位置反転ここまで
+
+
+// 歯車回転
+.position {
+  position: absolute;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+.button18 {
+  width: 20px;
+  height: 20px;
+  font-size: 1rem;
+  background: #615244;
+  position: relative;
+  top: -5px;
+  left: -5px;
+}
+.gear, .gear2{
+  width: 70px;
+  height: 70px;
+  margin-left: 5%;
+  border: 10px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+.gear {
+  position: relative;
+  right: 5px;
+  background: #9e6a38;
+}
+.gear2{
+  width: 90px;
+  height: 90px;
+  background: #8b5f35;
+  top: 0;
+}
+.button18:hover{
+  animation: rolling3 1s linear infinite;
+}
+.gear:hover{
+  animation: rolling3 2s linear infinite;
+}
+.gear2:hover{
+  animation: rolling3 3s linear infinite;
+}
+@keyframes rolling3 {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.round-box .regular_font2 {
+  line-height: 4;
+  margin-left: 13%;
+  font-size: 2rem;
+}
+// 歯車回転ここまで
+
+
+// グラデーションについて
+// 1と2はベンダープレフィックス・・・ブラウザ独自の拡張機能を実装するための識別子。無くすよう勧告されているため、逆に設定していると動作しない場合もある。→ 2020年後半にはベンダープレフィックスがほぼ必要なくなっている。
+// 1 background: -moz-linear-gradient(開始位置, 開始色 %, 終了色 %);
+// 2 background: -webkit-linear-gradient(開始位置, 開始色 %, 終了色 %);
+// 3 background: linear-gradient(角度, 開始色 %, 終了色 %);
+// 角度 0deg 下から上
+
+.button19 {
+  background: linear-gradient(0deg, #F89174 40%, #748af8);
+}
+
+.button20 {
+  background: linear-gradient(0deg, #FFF, #f8e5af 20%, #5a72e0 50%, #f474f8);
+}
+
+.button21 {
+  background: radial-gradient( #b6bcf5 40%, #7a8de6);
+}
+
+.button22 {
+  background: radial-gradient( rgb(241, 40, 5), #fb965b 20%, #ffffff 50%, #ffff06);
+}
+
+.button23 {
+  background: linear-gradient(25deg, rgba(255, 190, 44, 0.4), rgba(255, 44, 171, 0.7));
+}

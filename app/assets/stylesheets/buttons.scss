@@ -497,8 +497,8 @@ span {
 }
 //ジグザグ移動ここまで
 
-//伸びるボタン
-.button33 {
+//伸縮
+.button33, .button34 {
   width: 20px;
   height: 20px;
   line-height: 2rem;
@@ -508,14 +508,100 @@ span {
   margin-top: 3rem;
   color: white;
   background: linear-gradient(-45deg, #f8eca7, #ff9558);
+}
+.button33:hover {
   animation: locateChange4 3s linear infinite;
 }
 @keyframes locateChange4 {
   0%{
     width: 0;
   }
-  100%{
+  25%{
     width: 50%;
   }
+  50%{
+    width: 25%;
+  }
+  75%{
+    width: 50%;
+  }
+  100%{
+    width: 80%;
+  }
 }
-//伸びるボタンここまで
+//伸縮
+
+// 透過度変化ここから
+.button34:hover {
+  animation: fadeIn 3s linear infinite, locateChange4 3s linear infinite;
+}
+@keyframes fadeIn {
+  0%{
+    opacity: 0.3;
+  }
+  25%{
+    opacity: 0.1;
+  }
+  50%{
+    opacity: 0.7;
+  }
+  75%{
+    opacity: 0.2;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+//伸縮 + 透過度変化ここまで
+
+
+// 色変化 + 移動 + 回転 + 大きさ変化
+.button35 {
+  font-size: 3rem;
+  color: rgb(255, 238, 3);
+  text-shadow:  //全方位ぼかし強め
+    rgb(254, 255, 173) 1px 1px 10px, rgb(254, 255, 173) -1px 1px 10px,
+    rgb(254, 255, 173) 1px -1px 10px, rgb(254, 255, 173) -1px -1px 10px;
+  width: 30px;
+  height: 30px;
+  line-height: 2rem;
+  padding: 1rem 1rem;
+  margin-left: 5rem;
+  margin-top: 3rem;
+  background: transparent;
+}
+.button35:hover {
+  animation: locateAndScaleChange 4s linear infinite, colorChange2 6s linear infinite;
+}
+@keyframes locateAndScaleChange {
+  from {
+    transform: rotate(0deg) translateX(0px) scale(1.2);
+  }
+  50%{
+    transform: rotate(1080deg) translateX(150px) scale(1.4);
+  }
+  70% {
+    transform: translateX(400px) translateY(-400px) scale(1.6);
+  }
+  80% {
+    transform: rotate(360deg) translateX(400px) translateY(-400px) scale(1.4);
+  }
+  to {
+    transform: rotate(720deg) translateX(400px) translateY(0px) scale(0.7);
+  }
+}
+@keyframes colorChange2 {
+  from {
+    color: rgb(226, 137, 137);
+  }
+  25% {
+    color: rgb(120, 230, 69);
+  }
+  50% {
+    color: rgb(251, 255, 0);
+  }
+  to {
+    color: rgb(107, 98, 241);
+  }
+}
+// 色変化 + 移動 + 回転 + 大きさ変化ここまで
